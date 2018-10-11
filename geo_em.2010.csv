@@ -1,0 +1,12 @@
+WithoutShippingAviation
+geo_em.d03.total.annual.2010: 44.631 MtC
+geo_em.d02.total.annual.2010: 69.2679 MtC
+geo_em.d01.total.annual.2010: 176.057 MtC
+WithShippingAviation
+geo_em.d03.total.annual.2010: 44.8808 MtC
+geo_em.d02.total.annual.2010: 71.1171 MtC
+geo_em.d01.total.annual.2010: 189.203 MtC
+WithShippingOnly
+geo_em.d03.total.annual.2010: 44.6522 MtC
+geo_em.d02.total.annual.2010: 69.8454 MtC
+geo_em.d01.total.annual.2010: 179.797 MtC

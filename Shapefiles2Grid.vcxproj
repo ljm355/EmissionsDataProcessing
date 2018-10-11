@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5BE101F7-FC5D-4183-84A6-56BD4AF71F44}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PolygonStatistics</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>LA_VY</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OSGEO4W)/include;$(OSGEO4W)/include/qt4;$(OSGEO4W)/include/qt4/QtCore;$(OSGEO4W)/include/qt4/QtGui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OSGEO4W)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gdal_i.lib;qtcore4.lib;qtgui4.lib;ann.lib;netcdf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OSGEO4W)/include;$(OSGEO4W)/include/qt4;$(OSGEO4W)/include/qt4/QtCore;$(OSGEO4W)/include/qt4/QtGui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OSGEO4W)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gdal_i.lib;qtcore4.lib;qtgui4.lib;ann.lib;netcdf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ANNSearchEngine.h" />
+    <ClInclude Include="BatchDOE.h" />
+    <ClInclude Include="BoundManager.h" />
+    <ClInclude Include="DbfFile.h" />
+    <ClInclude Include="EMFAC.h" />
+    <ClInclude Include="EMFAC_FuelSplit.h" />
+    <ClInclude Include="ExtractByPolygon.h" />
+    <ClInclude Include="GDAL_DS.h" />
+    <ClInclude Include="Geographies.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="LosAngeles.h" />
+    <ClInclude Include="MarionElementa.h" />
+    <ClInclude Include="MonteCarloProbability.h" />
+    <ClInclude Include="MultitheadIntersection.h" />
+    <ClInclude Include="NeiborhoodOptimizationMatrixPrep.h" />
+    <ClInclude Include="NonPointProcessor.h" />
+    <ClInclude Include="PeMSStation.h" />
+    <ClInclude Include="Preprocessor.h" />
+    <ClInclude Include="RasterizationGridder.h" />
+    <ClInclude Include="Reallocator.h" />
+    <ClInclude Include="RemoteSensing.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RoadTimeIDW.h" />
+    <ClInclude Include="ScaleByFuel.h" />
+    <ClInclude Include="ShapeCreator.h" />
+    <ClInclude Include="ShapeFile.h" />
+    <ClInclude Include="shapes.h" />
+    <ClInclude Include="SparseFractionGrid.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TemporalGridderByShapes.h" />
+    <ClInclude Include="TemporalGridding.h" />
+    <ClInclude Include="TimestructTool.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vulcan2014.h" />
+    <ClInclude Include="Vulcan2Hestia.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ANNSearchEngine.cpp" />
+    <ClCompile Include="BatchDOE.cpp" />
+    <ClCompile Include="BoundManager.cpp" />
+    <ClCompile Include="DbfFile.cpp" />
+    <ClCompile Include="EMFAC.cpp" />
+    <ClCompile Include="EMFAC_FuelSplit.cpp" />
+    <ClCompile Include="ExtractByPolygon.cpp" />
+    <ClCompile Include="GDAL_DS.cpp" />
+    <ClCompile Include="Geographies.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="LosAngeles.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MarionElementa.cpp" />
+    <ClCompile Include="MonteCarloProbability.cpp" />
+    <ClCompile Include="MultitheadIntersection.cpp" />
+    <ClCompile Include="NeiborhoodOptimizationMatrixPrep.cpp" />
+    <ClCompile Include="NonPointProcessor.cpp" />
+    <ClCompile Include="PeMSStation.cpp" />
+    <ClCompile Include="Preprocessor.cpp" />
+    <ClCompile Include="RasterizationGridder.cpp" />
+    <ClCompile Include="Reallocator.cpp" />
+    <ClCompile Include="RemoteSensing.cpp" />
+    <ClCompile Include="RoadTimeIDW.cpp" />
+    <ClCompile Include="ScaleByFuel.cpp" />
+    <ClCompile Include="ShapeCreator.cpp" />
+    <ClCompile Include="ShapeFile.cpp" />
+    <ClCompile Include="SparseFractionGrid.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TemporalGridderByShapes.cpp" />
+    <ClCompile Include="TemporalGridding.cpp" />
+    <ClCompile Include="TimestructTool.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Vulcan2014.cpp" />
+    <ClCompile Include="Vulcan2Hestia.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Shapefiles2Grid.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,15 @@
+/ann_1.1.2/MS_Win32/dll/Debug/dll.tlog/*.tlog
+/ann_1.1.2/MS_Win32/dll/x64/Debug/dll.tlog/*.tlog
+/ann_1.1.2/MS_Win32/dll/x64/Release/ANNdll.tlog/*.tlog
+/Reproject/Reproject/Debug/Reproject.tlog/*.tlog
+/Reproject/Reproject/x64/Debug/Reproject.tlog/*.tlog
+/Reproject/Reproject/x64/Debug/ReprojectMarion.tlog/*.tlog
+/Reproject/Reproject/x64/Release/Reprojec.5BE101F7.tlog/*.tlog
+/Reproject/Reproject/x64/Release/Reproject.tlog/*.tlog
+/Reproject/Reproject/x64/Release/ReprojectMarion.tlog/*.tlog
+*.pdb
+*.obj
+*.log
+*.idb
+*.ilk
+*.lastbuildstate
